@@ -12,19 +12,25 @@ struct RPAnimatedTableReuseId {
     static let cell = "RPAnimatedTableViewCell"
 }
 
-class RPAnimatedTableViewController: UITableViewController {
+class RPAnimatedTableViewController: UITableViewController, RPAnimatedTableDelegate {
+    var animation = RPAnimation()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.applyCellNib(cellNibName: RPAnimatedTableReuseId.cell)
-
+        
+        animation.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
 
+    override func viewWillAppear(animated: Bool) {
+        animation.animateTable(animatedTableViewController: self, animatedType: RPAnimatedTableType.MoveTop)
+    }
+    
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {

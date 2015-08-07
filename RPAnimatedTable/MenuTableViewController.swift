@@ -24,6 +24,7 @@ class MenuTableViewController: UITableViewController {
         super.didReceiveMemoryWarning()
     }
 
+    
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
