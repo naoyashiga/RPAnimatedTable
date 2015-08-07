@@ -27,23 +27,47 @@ class MenuTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
+        return 2
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 3
     }
+    
+    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        switch section {
+        case 0:
+            return "Table"
+        case 1:
+            return "Collection"
+        default:
+            return ""
+        }
+    }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(menuReuseId.cell, forIndexPath: indexPath) as! MenuTableViewCell
         
-        switch indexPath.row {
-        case 0:
-            cell.titleLabel.text = "Spring"
-        case 1:
-            cell.titleLabel.text = "MoveTop"
-        default:
-            cell.titleLabel.text = "None"
+        if indexPath.section == 0 {
+            switch indexPath.row {
+            case 0:
+                cell.titleLabel.text = "Spring"
+            case 1:
+                cell.titleLabel.text = "MoveTop"
+            default:
+                cell.titleLabel.text = "None"
+            }
+            
+        } else {
+            switch indexPath.row {
+            case 0:
+                cell.titleLabel.text = "Spring"
+            case 1:
+                cell.titleLabel.text = "MoveTop"
+            default:
+                cell.titleLabel.text = "None"
+            }
+            
         }
         
         return cell
@@ -52,18 +76,31 @@ class MenuTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let cell = tableView.dequeueReusableCellWithIdentifier(menuReuseId.cell, forIndexPath: indexPath) as! MenuTableViewCell
         
-        let vc = RPAnimatedTableViewController()
-        
-        switch indexPath.row {
-        case 0:
-            vc.animatedType = RPAnimatedTableType.Spring
-        case 1:
-            vc.animatedType = RPAnimatedTableType.MoveTop
-        default:
-            vc.animatedType = RPAnimatedTableType.Spring
+        if indexPath.section == 0 {
+            
+            let vc = RPAnimatedTableViewController()
+            
+            switch indexPath.row {
+            case 0:
+                vc.animatedType = RPAnimatedTableType.Spring
+            case 1:
+                vc.animatedType = RPAnimatedTableType.MoveTop
+            default:
+                vc.animatedType = RPAnimatedTableType.Spring
+            }
+            
+            navigationController?.pushViewController(vc, animated: true)
+            
+        } else {
+            
+            let collectionViewLayout = UICollectionViewFlowLayout()
+            collectionViewLayout.itemSize = CGSize(width: view.frame.width, height: 200)
+            collectionViewLayout.minimumInteritemSpacing = 1
+            let vc = RPAnimatedCollectionViewController(collectionViewLayout: collectionViewLayout)
+            navigationController?.pushViewController(vc, animated: true)
+            
         }
 
-        navigationController?.pushViewController(vc, animated: true)
     }
 
 }

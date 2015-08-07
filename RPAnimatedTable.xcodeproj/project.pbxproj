@@ -20,6 +20,10 @@
 		9A3533071B74CB5B00C97A65 /* MenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A3533051B74CB5B00C97A65 /* MenuTableViewCell.xib */; };
 		9A35330C1B74E0F400C97A65 /* UITableView+RPExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A35330B1B74E0F400C97A65 /* UITableView+RPExtension.swift */; };
 		9A35330F1B74E65100C97A65 /* RPAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A35330E1B74E65100C97A65 /* RPAnimation.swift */; };
+		9A3533131B75713D00C97A65 /* RPAnimatedCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3533121B75713D00C97A65 /* RPAnimatedCollectionViewController.swift */; };
+		9A3533181B75717300C97A65 /* RPAnimatedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3533161B75717300C97A65 /* RPAnimatedCollectionViewCell.swift */; };
+		9A3533191B75717300C97A65 /* RPAnimatedCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A3533171B75717300C97A65 /* RPAnimatedCollectionViewCell.xib */; };
+		9A35331B1B7571EB00C97A65 /* UICollectionView+RPExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A35331A1B7571EB00C97A65 /* UICollectionView+RPExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +54,10 @@
 		9A3533051B74CB5B00C97A65 /* MenuTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuTableViewCell.xib; sourceTree = "<group>"; };
 		9A35330B1B74E0F400C97A65 /* UITableView+RPExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+RPExtension.swift"; sourceTree = "<group>"; };
 		9A35330E1B74E65100C97A65 /* RPAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPAnimation.swift; sourceTree = "<group>"; };
+		9A3533121B75713D00C97A65 /* RPAnimatedCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPAnimatedCollectionViewController.swift; sourceTree = "<group>"; };
+		9A3533161B75717300C97A65 /* RPAnimatedCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPAnimatedCollectionViewCell.swift; sourceTree = "<group>"; };
+		9A3533171B75717300C97A65 /* RPAnimatedCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RPAnimatedCollectionViewCell.xib; sourceTree = "<group>"; };
+		9A35331A1B7571EB00C97A65 /* UICollectionView+RPExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+RPExtension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,10 +140,8 @@
 		9A3533081B74CB7B00C97A65 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				9A3533041B74CB5B00C97A65 /* MenuTableViewCell.swift */,
-				9A3533051B74CB5B00C97A65 /* MenuTableViewCell.xib */,
-				9A3532FE1B74CA7900C97A65 /* RPAnimatedTableViewCell.swift */,
-				9A3532FF1B74CA7900C97A65 /* RPAnimatedTableViewCell.xib */,
+				9A3533151B75715400C97A65 /* Collection */,
+				9A3533141B75714900C97A65 /* Table */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -143,8 +149,8 @@
 		9A3533091B74CB8100C97A65 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				9A3533021B74CABB00C97A65 /* MenuTableViewController.swift */,
-				9A3532FC1B74CA5C00C97A65 /* RPAnimatedTableViewController.swift */,
+				9A3533111B7570F600C97A65 /* Collection */,
+				9A3533101B7570E200C97A65 /* Table */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -153,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				9A35330B1B74E0F400C97A65 /* UITableView+RPExtension.swift */,
+				9A35331A1B7571EB00C97A65 /* UICollectionView+RPExtension.swift */,
 			);
 			name = Extension;
 			sourceTree = "<group>";
@@ -163,6 +170,43 @@
 				9A35330E1B74E65100C97A65 /* RPAnimation.swift */,
 			);
 			name = RPAnimation;
+			sourceTree = "<group>";
+		};
+		9A3533101B7570E200C97A65 /* Table */ = {
+			isa = PBXGroup;
+			children = (
+				9A3533021B74CABB00C97A65 /* MenuTableViewController.swift */,
+				9A3532FC1B74CA5C00C97A65 /* RPAnimatedTableViewController.swift */,
+			);
+			name = Table;
+			sourceTree = "<group>";
+		};
+		9A3533111B7570F600C97A65 /* Collection */ = {
+			isa = PBXGroup;
+			children = (
+				9A3533121B75713D00C97A65 /* RPAnimatedCollectionViewController.swift */,
+			);
+			name = Collection;
+			sourceTree = "<group>";
+		};
+		9A3533141B75714900C97A65 /* Table */ = {
+			isa = PBXGroup;
+			children = (
+				9A3533041B74CB5B00C97A65 /* MenuTableViewCell.swift */,
+				9A3533051B74CB5B00C97A65 /* MenuTableViewCell.xib */,
+				9A3532FE1B74CA7900C97A65 /* RPAnimatedTableViewCell.swift */,
+				9A3532FF1B74CA7900C97A65 /* RPAnimatedTableViewCell.xib */,
+			);
+			name = Table;
+			sourceTree = "<group>";
+		};
+		9A3533151B75715400C97A65 /* Collection */ = {
+			isa = PBXGroup;
+			children = (
+				9A3533161B75717300C97A65 /* RPAnimatedCollectionViewCell.swift */,
+				9A3533171B75717300C97A65 /* RPAnimatedCollectionViewCell.xib */,
+			);
+			name = Collection;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -247,6 +291,7 @@
 			files = (
 				9A3533011B74CA7900C97A65 /* RPAnimatedTableViewCell.xib in Resources */,
 				9A3532E21B74C44100C97A65 /* Main.storyboard in Resources */,
+				9A3533191B75717300C97A65 /* RPAnimatedCollectionViewCell.xib in Resources */,
 				9A3532E71B74C44100C97A65 /* LaunchScreen.xib in Resources */,
 				9A3533071B74CB5B00C97A65 /* MenuTableViewCell.xib in Resources */,
 				9A3532E41B74C44100C97A65 /* Images.xcassets in Resources */,
@@ -270,7 +315,10 @@
 				9A3533001B74CA7900C97A65 /* RPAnimatedTableViewCell.swift in Sources */,
 				9A35330C1B74E0F400C97A65 /* UITableView+RPExtension.swift in Sources */,
 				9A3532FD1B74CA5C00C97A65 /* RPAnimatedTableViewController.swift in Sources */,
+				9A3533131B75713D00C97A65 /* RPAnimatedCollectionViewController.swift in Sources */,
+				9A35331B1B7571EB00C97A65 /* UICollectionView+RPExtension.swift in Sources */,
 				9A35330F1B74E65100C97A65 /* RPAnimation.swift in Sources */,
+				9A3533181B75717300C97A65 /* RPAnimatedCollectionViewCell.swift in Sources */,
 				9A3533061B74CB5B00C97A65 /* MenuTableViewCell.swift in Sources */,
 				9A3533031B74CABB00C97A65 /* MenuTableViewController.swift in Sources */,
 				9A3532DD1B74C44100C97A65 /* AppDelegate.swift in Sources */,
