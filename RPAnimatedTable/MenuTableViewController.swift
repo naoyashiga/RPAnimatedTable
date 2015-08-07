@@ -17,7 +17,6 @@ class MenuTableViewController: UITableViewController {
         super.viewDidLoad()
         
         tableView.applyCellNib(cellNibName: menuReuseId.cell)
-
     }
 
     override func didReceiveMemoryWarning() {
@@ -38,17 +37,32 @@ class MenuTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(menuReuseId.cell, forIndexPath: indexPath) as! MenuTableViewCell
         
-        cell.titleLabel.text = "title \(indexPath.row)"
-
-
+        switch indexPath.row {
+        case 0:
+            cell.titleLabel.text = "Spring"
+        case 1:
+            cell.titleLabel.text = "MoveTop"
+        default:
+            cell.titleLabel.text = "None"
+        }
+        
         return cell
     }
 
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let cell = tableView.dequeueReusableCellWithIdentifier(menuReuseId.cell, forIndexPath: indexPath) as! MenuTableViewCell
         
-        
         let vc = RPAnimatedTableViewController()
+        
+        switch indexPath.row {
+        case 0:
+            vc.animatedType = RPAnimatedTableType.Spring
+        case 1:
+            vc.animatedType = RPAnimatedTableType.MoveTop
+        default:
+            vc.animatedType = RPAnimatedTableType.Spring
+        }
+
         navigationController?.pushViewController(vc, animated: true)
     }
 

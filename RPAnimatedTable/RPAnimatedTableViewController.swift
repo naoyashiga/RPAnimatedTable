@@ -14,6 +14,7 @@ struct RPAnimatedTableReuseId {
 
 class RPAnimatedTableViewController: UITableViewController, RPAnimatedTableDelegate {
     var animation = RPAnimation()
+    var animatedType = RPAnimatedTableType.Spring
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +29,7 @@ class RPAnimatedTableViewController: UITableViewController, RPAnimatedTableDeleg
     }
 
     override func viewWillAppear(animated: Bool) {
-        animation.animateTable(animatedTableViewController: self, animatedType: RPAnimatedTableType.MoveTop)
+        animation.animateTable(animatedTableViewController: self, animatedType: animatedType)
     }
     
     // MARK: - Table view data source
