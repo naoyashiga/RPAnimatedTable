@@ -8,11 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		9A3532DD1B74C44100C97A65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3532DC1B74C44100C97A65 /* AppDelegate.swift */; };
-		9A3532DF1B74C44100C97A65 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3532DE1B74C44100C97A65 /* ViewController.swift */; };
 		9A3532E21B74C44100C97A65 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A3532E01B74C44100C97A65 /* Main.storyboard */; };
 		9A3532E41B74C44100C97A65 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A3532E31B74C44100C97A65 /* Images.xcassets */; };
 		9A3532E71B74C44100C97A65 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A3532E51B74C44100C97A65 /* LaunchScreen.xib */; };
 		9A3532F31B74C44100C97A65 /* RPAnimatedTableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3532F21B74C44100C97A65 /* RPAnimatedTableTests.swift */; };
+		9A3532FD1B74CA5C00C97A65 /* RPAnimatedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3532FC1B74CA5C00C97A65 /* RPAnimatedTableViewController.swift */; };
+		9A3533001B74CA7900C97A65 /* RPAnimatedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3532FE1B74CA7900C97A65 /* RPAnimatedTableViewCell.swift */; };
+		9A3533011B74CA7900C97A65 /* RPAnimatedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A3532FF1B74CA7900C97A65 /* RPAnimatedTableViewCell.xib */; };
+		9A3533031B74CABB00C97A65 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3533021B74CABB00C97A65 /* MenuTableViewController.swift */; };
+		9A3533061B74CB5B00C97A65 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3533041B74CB5B00C97A65 /* MenuTableViewCell.swift */; };
+		9A3533071B74CB5B00C97A65 /* MenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A3533051B74CB5B00C97A65 /* MenuTableViewCell.xib */; };
+		9A35330C1B74E0F400C97A65 /* UITableView+RPExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A35330B1B74E0F400C97A65 /* UITableView+RPExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,13 +35,19 @@
 		9A3532D71B74C44100C97A65 /* RPAnimatedTable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RPAnimatedTable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A3532DB1B74C44100C97A65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A3532DC1B74C44100C97A65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9A3532DE1B74C44100C97A65 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9A3532E11B74C44100C97A65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9A3532E31B74C44100C97A65 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9A3532E61B74C44100C97A65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		9A3532EC1B74C44100C97A65 /* RPAnimatedTableTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RPAnimatedTableTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A3532F11B74C44100C97A65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A3532F21B74C44100C97A65 /* RPAnimatedTableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPAnimatedTableTests.swift; sourceTree = "<group>"; };
+		9A3532FC1B74CA5C00C97A65 /* RPAnimatedTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPAnimatedTableViewController.swift; sourceTree = "<group>"; };
+		9A3532FE1B74CA7900C97A65 /* RPAnimatedTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPAnimatedTableViewCell.swift; sourceTree = "<group>"; };
+		9A3532FF1B74CA7900C97A65 /* RPAnimatedTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RPAnimatedTableViewCell.xib; sourceTree = "<group>"; };
+		9A3533021B74CABB00C97A65 /* MenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
+		9A3533041B74CB5B00C97A65 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
+		9A3533051B74CB5B00C97A65 /* MenuTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuTableViewCell.xib; sourceTree = "<group>"; };
+		9A35330B1B74E0F400C97A65 /* UITableView+RPExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+RPExtension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,8 +89,10 @@
 		9A3532D91B74C44100C97A65 /* RPAnimatedTable */ = {
 			isa = PBXGroup;
 			children = (
+				9A35330A1B74E0D700C97A65 /* Extension */,
 				9A3532DC1B74C44100C97A65 /* AppDelegate.swift */,
-				9A3532DE1B74C44100C97A65 /* ViewController.swift */,
+				9A3533091B74CB8100C97A65 /* Controller */,
+				9A3533081B74CB7B00C97A65 /* View */,
 				9A3532E01B74C44100C97A65 /* Main.storyboard */,
 				9A3532E31B74C44100C97A65 /* Images.xcassets */,
 				9A3532E51B74C44100C97A65 /* LaunchScreen.xib */,
@@ -110,6 +124,34 @@
 				9A3532F11B74C44100C97A65 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9A3533081B74CB7B00C97A65 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9A3533041B74CB5B00C97A65 /* MenuTableViewCell.swift */,
+				9A3533051B74CB5B00C97A65 /* MenuTableViewCell.xib */,
+				9A3532FE1B74CA7900C97A65 /* RPAnimatedTableViewCell.swift */,
+				9A3532FF1B74CA7900C97A65 /* RPAnimatedTableViewCell.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		9A3533091B74CB8100C97A65 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9A3533021B74CABB00C97A65 /* MenuTableViewController.swift */,
+				9A3532FC1B74CA5C00C97A65 /* RPAnimatedTableViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		9A35330A1B74E0D700C97A65 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				9A35330B1B74E0F400C97A65 /* UITableView+RPExtension.swift */,
+			);
+			name = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,8 +234,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A3533011B74CA7900C97A65 /* RPAnimatedTableViewCell.xib in Resources */,
 				9A3532E21B74C44100C97A65 /* Main.storyboard in Resources */,
 				9A3532E71B74C44100C97A65 /* LaunchScreen.xib in Resources */,
+				9A3533071B74CB5B00C97A65 /* MenuTableViewCell.xib in Resources */,
 				9A3532E41B74C44100C97A65 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -212,7 +256,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A3532DF1B74C44100C97A65 /* ViewController.swift in Sources */,
+				9A3533001B74CA7900C97A65 /* RPAnimatedTableViewCell.swift in Sources */,
+				9A35330C1B74E0F400C97A65 /* UITableView+RPExtension.swift in Sources */,
+				9A3532FD1B74CA5C00C97A65 /* RPAnimatedTableViewController.swift in Sources */,
+				9A3533061B74CB5B00C97A65 /* MenuTableViewCell.swift in Sources */,
+				9A3533031B74CABB00C97A65 /* MenuTableViewController.swift in Sources */,
 				9A3532DD1B74C44100C97A65 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
