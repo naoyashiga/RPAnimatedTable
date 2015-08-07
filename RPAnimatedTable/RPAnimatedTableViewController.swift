@@ -49,6 +49,4 @@ class RPAnimatedTableViewController: UITableViewController, RPAnimatedTableDeleg
 
         return cell
     }
-
-
 }

@@ -93,12 +93,12 @@
 			children = (
 				9A3532DC1B74C44100C97A65 /* AppDelegate.swift */,
 				9A35330D1B74E63E00C97A65 /* RPAnimation */,
-				9A35330A1B74E0D700C97A65 /* Extension */,
 				9A3533091B74CB8100C97A65 /* Controller */,
 				9A3533081B74CB7B00C97A65 /* View */,
 				9A3532E01B74C44100C97A65 /* Main.storyboard */,
 				9A3532E31B74C44100C97A65 /* Images.xcassets */,
 				9A3532E51B74C44100C97A65 /* LaunchScreen.xib */,
+				9A35330A1B74E0D700C97A65 /* Extension */,
 				9A3532DA1B74C44100C97A65 /* Supporting Files */,
 			);
 			path = RPAnimatedTable;

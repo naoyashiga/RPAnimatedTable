@@ -20,70 +20,84 @@ protocol RPAnimatedTableDelegate {
 
 public class RPAnimation:NSObject {
     var tableView = UITableView()
+    
+    var tableHeight: CGFloat = 0
     var delegate: RPAnimatedTableDelegate?
     
     func animateTable(#animatedTableViewController:RPAnimatedTableViewController, animatedType type: RPAnimatedTableType) {
         
         tableView = animatedTableViewController.tableView
+        tableHeight = tableView.bounds.size.height
+        startAnimation(animatedType: type)
+    }
+    
+    private func startAnimation(#animatedType: RPAnimatedTableType) {
+        tableView.reloadData()
+        let cells = tableView.visibleCells()
         
-        switch type {
+        for cell in cells {
+            if let cell = cell as? UITableViewCell {
+                stateBeforeAnimation(animatedCell: cell, animatedType: animatedType)
+            }
+        }
+        
+        for(index, cell) in enumerate(cells) {
+            
+            if let cell = cell as? UITableViewCell {
+                stateAfterAnimation(animatedCell: cell, animatedType: animatedType, index: index)
+            }
+        }
+        
+    }
+    
+    private func stateBeforeAnimation(#animatedCell: UITableViewCell, animatedType: RPAnimatedTableType) {
+        switch animatedType {
         case .Spring:
-            spring()
+            animatedCell.transform = CGAffineTransformMakeTranslation(0, tableHeight)
         case .MoveTop:
-            moveTopTable()
+            animatedCell.transform = CGAffineTransformMakeTranslation(0, animatedCell.frame.size.height / 3)
+            animatedCell.layer.opacity = 0
         default:
-            moveTopTable()
+            break
         }
+        
     }
     
-    private func spring() {
-        tableView.reloadData()
-        
-        let cells = tableView.visibleCells()
-        let tableHeight: CGFloat = tableView.bounds.size.height
-        
-        for i in cells {
-            let cell = i as! UITableViewCell
-            cell.transform = CGAffineTransformMakeTranslation(0, tableHeight)
-        }
-        
-        var index = 0
-        
-        for a in cells {
-            let cell = a as! UITableViewCell
-            UIView.animateWithDuration(1.5, delay: 0.05 * Double(index), usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: nil, animations: {
-                cell.transform = CGAffineTransformMakeTranslation(0, 0);
-                }, completion: nil)
+    private func stateAfterAnimation(#animatedCell: UITableViewCell, animatedType: RPAnimatedTableType, index: Int) {
+        switch animatedType {
+        case .Spring:
+            let duration: NSTimeInterval = 1.5
             
-            index += 1
-        }
-    }
-    
-    private func moveTopTable () {
-        tableView.reloadData()
-        
-        let cells = tableView.visibleCells()
-        let tableHeight: CGFloat = tableView.bounds.size.height
-        let duration: NSTimeInterval = 0.5
-        
-        for i in cells {
-            let cell = i as! UITableViewCell
-            cell.transform = CGAffineTransformMakeTranslation(0, cell.frame.size.height / 3)
-            cell.layer.opacity = 0
-        }
-        
-        var index = 0
-        
-        for a in cells {
-            let cell = a as! UITableViewCell
-            UIView.animateWithDuration(duration, delay: 0.05 * Double(index), usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: nil, animations: {
-                cell.transform = CGAffineTransformMakeTranslation(0, 0);
-                cell.layer.opacity = 1.0
-                }, completion: nil)
+            UIView.animateWithDuration(
+                1.5,
+                delay: 0.05 * Double(index),
+                usingSpringWithDamping: 0.8,
+                initialSpringVelocity: 0,
+                options: nil,
+                animations: {
+                    animatedCell.transform = CGAffineTransformMakeTranslation(0, 0);
+                },
+                completion: nil
+            )
             
-            index += 1
+        case .MoveTop:
+            let duration: NSTimeInterval = 0.5
+            
+            UIView.animateWithDuration(
+                duration,
+                delay: 0.05 * Double(index),
+                usingSpringWithDamping: 0.8,
+                initialSpringVelocity: 0,
+                options: nil,
+                animations: {
+                    animatedCell.transform = CGAffineTransformMakeTranslation(0, 0)
+                    animatedCell.layer.opacity = 1.0
+                },
+                completion: nil
+            )
+            
+        default:
+            break
         }
     }
-    
-    
 }
