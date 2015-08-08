@@ -75,7 +75,7 @@ public class RPTableAnimation:NSObject {
                 initialSpringVelocity: 0,
                 options: nil,
                 animations: {
-                    animatedCell.transform = CGAffineTransformMakeTranslation(0, 0);
+                    animatedCell.transform = CGAffineTransformMakeTranslation(0, 0)
                 },
                 completion: nil
             )
