@@ -11,7 +11,7 @@ import UIKit
 
 enum RPAnimatedTableType {
     case Spring
-    case MoveTop
+    case FadeIn
 }
 
 protocol RPAnimatedTableDelegate {
@@ -54,7 +54,7 @@ public class RPTableAnimation:NSObject {
         switch animatedType {
         case .Spring:
             animatedCell.transform = CGAffineTransformMakeTranslation(0, tableHeight)
-        case .MoveTop:
+        case .FadeIn:
             animatedCell.transform = CGAffineTransformMakeTranslation(0, animatedCell.frame.size.height / 3)
             animatedCell.layer.opacity = 0
         default:
@@ -80,7 +80,7 @@ public class RPTableAnimation:NSObject {
                 completion: nil
             )
             
-        case .MoveTop:
+        case .FadeIn:
             let duration: NSTimeInterval = 0.5
             
             UIView.animateWithDuration(

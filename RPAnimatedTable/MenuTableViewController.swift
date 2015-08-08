@@ -53,7 +53,7 @@ class MenuTableViewController: UITableViewController {
             case 0:
                 cell.titleLabel.text = "Spring"
             case 1:
-                cell.titleLabel.text = "MoveTop"
+                cell.titleLabel.text = "FadeIn"
             default:
                 cell.titleLabel.text = "None"
             }
@@ -84,7 +84,7 @@ class MenuTableViewController: UITableViewController {
             case 0:
                 vc.animatedType = .Spring
             case 1:
-                vc.animatedType = .MoveTop
+                vc.animatedType = .FadeIn
             default:
                 vc.animatedType = .Spring
             }
@@ -103,7 +103,7 @@ class MenuTableViewController: UITableViewController {
             case 0:
                 vc.animatedType = .Spring
             case 1:
-                vc.animatedType = .MoveTop
+                vc.animatedType = .FadeIn
             default:
                 vc.animatedType = .Spring
             }
