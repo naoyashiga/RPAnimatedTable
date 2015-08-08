@@ -18,7 +18,7 @@ protocol RPAnimatedTableDelegate {
 //    func animateTable(#animatedTableViewController:RPAnimatedTableViewController, animatedType type: RPAnimatedTableType)
 }
 
-public class RPAnimation:NSObject {
+public class RPTableAnimation:NSObject {
     var tableView = UITableView()
     
     var tableHeight: CGFloat = 0

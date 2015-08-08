@@ -19,11 +19,12 @@
 		9A3533061B74CB5B00C97A65 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3533041B74CB5B00C97A65 /* MenuTableViewCell.swift */; };
 		9A3533071B74CB5B00C97A65 /* MenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A3533051B74CB5B00C97A65 /* MenuTableViewCell.xib */; };
 		9A35330C1B74E0F400C97A65 /* UITableView+RPExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A35330B1B74E0F400C97A65 /* UITableView+RPExtension.swift */; };
-		9A35330F1B74E65100C97A65 /* RPAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A35330E1B74E65100C97A65 /* RPAnimation.swift */; };
+		9A35330F1B74E65100C97A65 /* RPTableAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A35330E1B74E65100C97A65 /* RPTableAnimation.swift */; };
 		9A3533131B75713D00C97A65 /* RPAnimatedCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3533121B75713D00C97A65 /* RPAnimatedCollectionViewController.swift */; };
 		9A3533181B75717300C97A65 /* RPAnimatedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3533161B75717300C97A65 /* RPAnimatedCollectionViewCell.swift */; };
 		9A3533191B75717300C97A65 /* RPAnimatedCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A3533171B75717300C97A65 /* RPAnimatedCollectionViewCell.xib */; };
 		9A35331B1B7571EB00C97A65 /* UICollectionView+RPExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A35331A1B7571EB00C97A65 /* UICollectionView+RPExtension.swift */; };
+		9A35331E1B75792400C97A65 /* RPCollectionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A35331D1B75792400C97A65 /* RPCollectionAnimation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,11 +54,12 @@
 		9A3533041B74CB5B00C97A65 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		9A3533051B74CB5B00C97A65 /* MenuTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuTableViewCell.xib; sourceTree = "<group>"; };
 		9A35330B1B74E0F400C97A65 /* UITableView+RPExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+RPExtension.swift"; sourceTree = "<group>"; };
-		9A35330E1B74E65100C97A65 /* RPAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPAnimation.swift; sourceTree = "<group>"; };
+		9A35330E1B74E65100C97A65 /* RPTableAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPTableAnimation.swift; sourceTree = "<group>"; };
 		9A3533121B75713D00C97A65 /* RPAnimatedCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPAnimatedCollectionViewController.swift; sourceTree = "<group>"; };
 		9A3533161B75717300C97A65 /* RPAnimatedCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPAnimatedCollectionViewCell.swift; sourceTree = "<group>"; };
 		9A3533171B75717300C97A65 /* RPAnimatedCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RPAnimatedCollectionViewCell.xib; sourceTree = "<group>"; };
 		9A35331A1B7571EB00C97A65 /* UICollectionView+RPExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+RPExtension.swift"; sourceTree = "<group>"; };
+		9A35331D1B75792400C97A65 /* RPCollectionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPCollectionAnimation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +151,7 @@
 		9A3533091B74CB8100C97A65 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				9A35331C1B7578F800C97A65 /* Menu */,
 				9A3533111B7570F600C97A65 /* Collection */,
 				9A3533101B7570E200C97A65 /* Table */,
 			);
@@ -167,7 +170,8 @@
 		9A35330D1B74E63E00C97A65 /* RPAnimation */ = {
 			isa = PBXGroup;
 			children = (
-				9A35330E1B74E65100C97A65 /* RPAnimation.swift */,
+				9A35330E1B74E65100C97A65 /* RPTableAnimation.swift */,
+				9A35331D1B75792400C97A65 /* RPCollectionAnimation.swift */,
 			);
 			name = RPAnimation;
 			sourceTree = "<group>";
@@ -175,7 +179,6 @@
 		9A3533101B7570E200C97A65 /* Table */ = {
 			isa = PBXGroup;
 			children = (
-				9A3533021B74CABB00C97A65 /* MenuTableViewController.swift */,
 				9A3532FC1B74CA5C00C97A65 /* RPAnimatedTableViewController.swift */,
 			);
 			name = Table;
@@ -207,6 +210,14 @@
 				9A3533171B75717300C97A65 /* RPAnimatedCollectionViewCell.xib */,
 			);
 			name = Collection;
+			sourceTree = "<group>";
+		};
+		9A35331C1B7578F800C97A65 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				9A3533021B74CABB00C97A65 /* MenuTableViewController.swift */,
+			);
+			name = Menu;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -317,7 +328,8 @@
 				9A3532FD1B74CA5C00C97A65 /* RPAnimatedTableViewController.swift in Sources */,
 				9A3533131B75713D00C97A65 /* RPAnimatedCollectionViewController.swift in Sources */,
 				9A35331B1B7571EB00C97A65 /* UICollectionView+RPExtension.swift in Sources */,
-				9A35330F1B74E65100C97A65 /* RPAnimation.swift in Sources */,
+				9A35330F1B74E65100C97A65 /* RPTableAnimation.swift in Sources */,
+				9A35331E1B75792400C97A65 /* RPCollectionAnimation.swift in Sources */,
 				9A3533181B75717300C97A65 /* RPAnimatedCollectionViewCell.swift in Sources */,
 				9A3533061B74CB5B00C97A65 /* MenuTableViewCell.swift in Sources */,
 				9A3533031B74CABB00C97A65 /* MenuTableViewController.swift in Sources */,

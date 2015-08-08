@@ -59,14 +59,14 @@ class MenuTableViewController: UITableViewController {
             }
             
         } else {
-            switch indexPath.row {
-            case 0:
-                cell.titleLabel.text = "Spring"
-            case 1:
-                cell.titleLabel.text = "MoveTop"
-            default:
-                cell.titleLabel.text = "None"
-            }
+//            switch indexPath.row {
+//            case 0:
+//                cell.titleLabel.text = "Spring"
+//            case 1:
+//                cell.titleLabel.text = "MoveTop"
+//            default:
+//                cell.titleLabel.text = "None"
+//            }
             
         }
         
@@ -82,11 +82,11 @@ class MenuTableViewController: UITableViewController {
             
             switch indexPath.row {
             case 0:
-                vc.animatedType = RPAnimatedTableType.Spring
+                vc.animatedType = .Spring
             case 1:
-                vc.animatedType = RPAnimatedTableType.MoveTop
+                vc.animatedType = .MoveTop
             default:
-                vc.animatedType = RPAnimatedTableType.Spring
+                vc.animatedType = .Spring
             }
             
             navigationController?.pushViewController(vc, animated: true)
@@ -96,8 +96,19 @@ class MenuTableViewController: UITableViewController {
             let collectionViewLayout = UICollectionViewFlowLayout()
             collectionViewLayout.itemSize = CGSize(width: view.frame.width, height: 200)
             collectionViewLayout.minimumInteritemSpacing = 1
+            
             let vc = RPAnimatedCollectionViewController(collectionViewLayout: collectionViewLayout)
-            navigationController?.pushViewController(vc, animated: true)
+            
+            switch indexPath.row {
+            case 0:
+                vc.animatedType = .Spring
+            case 1:
+                vc.animatedType = .MoveTop
+            default:
+                vc.animatedType = .Spring
+            }
+            
+//            navigationController?.pushViewController(vc, animated: true)
             
         }
 

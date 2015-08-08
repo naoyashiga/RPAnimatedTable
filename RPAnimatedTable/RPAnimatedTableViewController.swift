@@ -13,7 +13,7 @@ struct RPAnimatedTableReuseId {
 }
 
 class RPAnimatedTableViewController: UITableViewController, RPAnimatedTableDelegate {
-    var animation = RPAnimation()
+    var animation = RPTableAnimation()
     var animatedType = RPAnimatedTableType.Spring
 
     override func viewDidLoad() {

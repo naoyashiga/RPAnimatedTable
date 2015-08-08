@@ -14,6 +14,9 @@ struct RPAnimatedCollectionReuseId {
 
 class RPAnimatedCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
+    var animation = RPCollectionAnimation()
+    var animatedType = RPAnimatedCollectionType.Spring
+    
     private var cellWidth:CGFloat = 0.0
     private var cellHeight:CGFloat = 0.0
     
@@ -24,10 +27,56 @@ class RPAnimatedCollectionViewController: UICollectionViewController, UICollecti
         cellHeight = view.bounds.width / 2
 
         collectionView?.applyCellNib(cellNibName: RPAnimatedCollectionReuseId.cell)
+        sampleAnimation()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        sampleAnimation()
+        
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+//        animation.animateCollection(animatedCollectionView: collectionView!, animatedType: animatedType)
+//        animation.animateCollection(animatedCollectionViewController: self, animatedType: animatedType)
+        
+//        sampleAnimation()
+    }
+    
+    func sampleAnimation() {
+        collectionView!.reloadData()
+        let cells = collectionView!.visibleCells()
+        let collectionHeight = collectionView!.bounds.size.height
+        
+        
+        for cell in cells {
+            if let cell = cell as? UICollectionViewCell {
+                cell.transform = CGAffineTransformMakeTranslation(0, collectionHeight)
+            }
+        }
+        
+        for(index, cell) in enumerate(cells) {
+            
+            if let cell = cell as? UICollectionViewCell {
+                let duration: NSTimeInterval = 1.5
+                
+                UIView.animateWithDuration(
+                    1.5,
+                    delay: 0.05 * Double(index),
+                    usingSpringWithDamping: 0.8,
+                    initialSpringVelocity: 0,
+                    options: nil,
+                    animations: {
+                        cell.transform = CGAffineTransformMakeTranslation(0, 0);
+                    },
+                    completion: nil
+                )
+            }
+        }
+        
     }
     
     // MARK: UICollectionViewDataSource
