@@ -25,6 +25,7 @@
 		9A3533191B75717300C97A65 /* RPAnimatedCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A3533171B75717300C97A65 /* RPAnimatedCollectionViewCell.xib */; };
 		9A35331B1B7571EB00C97A65 /* UICollectionView+RPExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A35331A1B7571EB00C97A65 /* UICollectionView+RPExtension.swift */; };
 		9A35331E1B75792400C97A65 /* RPCollectionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A35331D1B75792400C97A65 /* RPCollectionAnimation.swift */; };
+		9A3533201B759E6B00C97A65 /* UIColor+RPExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A35331F1B759E6B00C97A65 /* UIColor+RPExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		9A3533171B75717300C97A65 /* RPAnimatedCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RPAnimatedCollectionViewCell.xib; sourceTree = "<group>"; };
 		9A35331A1B7571EB00C97A65 /* UICollectionView+RPExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+RPExtension.swift"; sourceTree = "<group>"; };
 		9A35331D1B75792400C97A65 /* RPCollectionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPCollectionAnimation.swift; sourceTree = "<group>"; };
+		9A35331F1B759E6B00C97A65 /* UIColor+RPExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+RPExtension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +165,7 @@
 			children = (
 				9A35330B1B74E0F400C97A65 /* UITableView+RPExtension.swift */,
 				9A35331A1B7571EB00C97A65 /* UICollectionView+RPExtension.swift */,
+				9A35331F1B759E6B00C97A65 /* UIColor+RPExtension.swift */,
 			);
 			name = Extension;
 			sourceTree = "<group>";
@@ -330,6 +333,7 @@
 				9A35331B1B7571EB00C97A65 /* UICollectionView+RPExtension.swift in Sources */,
 				9A35330F1B74E65100C97A65 /* RPTableAnimation.swift in Sources */,
 				9A35331E1B75792400C97A65 /* RPCollectionAnimation.swift in Sources */,
+				9A3533201B759E6B00C97A65 /* UIColor+RPExtension.swift in Sources */,
 				9A3533181B75717300C97A65 /* RPAnimatedCollectionViewCell.swift in Sources */,
 				9A3533061B74CB5B00C97A65 /* MenuTableViewCell.swift in Sources */,
 				9A3533031B74CABB00C97A65 /* MenuTableViewController.swift in Sources */,
